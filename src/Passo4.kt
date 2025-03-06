@@ -287,5 +287,157 @@
 //• Quantas pessoas tem menos de 5 anos
 //• Qual foi a maior idade lida
 
+//fun main(){
+//    var mais18 = 0
+//    var menos5 = 0
+//    var somaIdade = 0
+//    var maiorDeIdade = 0
+//    var qtd = 0
+//
+//    while(qtd <= 10){
+//        print("Digite sua idade: ")
+//        val idade = readln()!!.toInt()
+//        somaIdade  += idade
+//
+//        if(idade >= 18){
+//            mais18 ++
+//        }
+//
+//        if(idade < 5){
+//            menos5 ++
+//        }
+//
+//        if(idade > maiorDeIdade){
+//            maiorDeIdade = idade
+//        }
+//        qtd++
+//    }
+//    val media = somaIdade.toDouble() / qtd
+//    println("Media de idade do grupo de pessoas: $media")
+//    println("Quantidade de pessoas com maior de 18 anos: $mais18")
+//    println("Quantidade de pessoas menores de 5 anos: $menos5")
+//    println("Maior idade citada: $maiorDeIdade")
+//}
 
-//a
+
+
+//• Faça um programa que leia a idade e o sexo de 5 pessoas,
+//mostrando no final:
+//• Quantos homens foram cadastrados
+//• Quantas mulheres foram cadastradas
+//• A média de idade do grupo
+//• A média de idade dos homens
+//• Quantas mulheres tem mais de 20 anos
+
+//fun main() {
+//    var Homen = 0
+//    var Mulher= 0
+//    var somaIdades = 0
+//    var somaIdadeHomens = 0
+//    var qtdMulheresMais20 = 0
+//    var qtd = 0
+//
+//    while (qtd < 5) {
+//        print("Digite a idade: ")
+//        val idade = readLine()!!.toInt()
+//
+//        print("Digite o sexo (M/F): ")
+//        val sexo = readLine()!!
+//
+//        somaIdades += idade
+//
+//        if (sexo == "M" || sexo == "m") {
+//            Homen++
+//            somaIdadeHomens += idade
+//        } else if (sexo == "F" || sexo == "f") {
+//            Mulher++
+//            if (idade > 20) {
+//                qtdMulheresMais20++
+//            }
+//        }
+//        qtd++
+//    }
+//    val mediaIdadeGrupo = somaIdades / 5.0
+//    val mediaIdadeHomens = if (Homen > 0) somaIdadeHomens / Homen.toDouble() else 0.0
+//
+//    println("Total de homens cadastrados: $Homen")
+//    println("Total de mulheres cadastradas: $Mulher")
+//    println("Média de idade do grupo: %.2f".format(mediaIdadeGrupo))
+//    println("Média de idade dos homens: %.2f".format(mediaIdadeHomens))
+//    println("Mulheres com mais de 20 anos: $qtdMulheresMais20")
+//}
+
+
+
+//• Desenvolva um aplicativo que leia o peso e a altura de 7
+//pessoas, mostrando no final:
+//• Qual foi a média de altura do grupo
+//• Quantas pessoas pesam mais de 90Kg
+//• Quantas pessoas que pesam menos de 50Kg tem menos de 1.60m
+//• Quantas pessoas que medem mais de 1.90m pesam mais de
+//100Kg.
+//
+//fun main() {
+//    var somaAltura = 0
+//    var pessoasMais90kg = 0
+//    var pessoasMenos50kgMenos160cm = 0
+//    var pessoasMais190cmMais100kg = 0
+//    var qtd = 0
+//
+//    while (qtd < 7) {
+//        print("Digite o peso da pessoa ${qtd + 1} (Kg): ")
+//        val peso = readLine()!!.toDouble()
+//
+//        print("Digite a altura da pessoa ${qtd + 1} (m): ")
+//        val altura = readLine()!!.toInt()
+//
+//        somaAltura += altura
+//
+//        if (peso > 90) {
+//            pessoasMais90kg++
+//        }
+//        if (peso < 50 && altura < 1.60) {
+//            pessoasMenos50kgMenos160cm++
+//        }
+//        if (altura > 1.90 && peso > 100) {
+//            pessoasMais190cmMais100kg++
+//        }
+//
+//        qtd++
+//    }
+//
+//    val mediaAltura = somaAltura / 7
+//
+//    println("Média de altura do grupo: %.2f m".format(mediaAltura))
+//    println("Pessoas com mais de 90Kg: $pessoasMais90kg")
+//    println("Pessoas com menos de 50Kg e menos de 1.60m: $pessoasMenos50kgMenos160cm")
+//    println("Pessoas com mais de 1.90m e mais de 100Kg: $pessoasMais190cmMais100kg")
+//}
+
+
+
+//• [DESAFIO] Vamos melhorar o jogo que fizemos no exercício
+//32. A partir de agora, o computador vai sortear um número entre
+//1 e 10 e o jogador vai ter 4 tentativas para tentar acertar.
+
+//import kotlin.random.Random
+//
+//fun main() {
+//    val Sorteado = Random.nextInt(1, 11)
+//    var tentativas = 4
+//
+//    while (tentativas > 0) {
+//        print("Digite um número entre 1 e 10: ")
+//        val palpite = readLine()!!.toInt()
+//
+//        if (palpite == Sorteado) {
+//            println("Parabéns! Você acertou.")
+//            return
+//        }
+//
+//        tentativas--
+//        println("Errado! Tentativas restantes: $tentativas")
+//    }
+//
+//    println("Acabaram as tentativas! O número era $Sorteado.")
+//}
