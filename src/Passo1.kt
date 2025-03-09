@@ -195,7 +195,7 @@ fun salario_aumento(){
 //Considere que ele trabalha 8 horas por dia e ganha R$25 por hora trabalhada.
 
 
-fun salario(){
+fun salary(){
     println("Digite quantos dias voce trbaalhou:")
     val dias_trabalhados = readln().toInt()
     val recebe_dia=8 * 25
