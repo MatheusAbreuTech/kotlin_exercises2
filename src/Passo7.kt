@@ -98,3 +98,43 @@ fun count_sex() {
     println(" Média de peso entre as mulheres: %.2f kg".format(mediaPesoMulheres))
     println(" Maior peso entre os homens: %.2f kg".format(maiorPesoHomem))
 }
+/*• [DESAFIO] Desenvolva um programa que leia o primeiro termo e a
+razão de uma PA (Progressão Aritmética), mostrando na tela os 10
+primeiros elementos da PA e a soma entre todos os valores da
+sequência.*/
+
+fun PA(primeiroTermo: Int, razao: Int) {
+    var termo = primeiroTermo
+    var soma = 0
+
+    for (i in 1..10) {
+        print("$termo ")
+        if (i < 10) {
+            print(">> ")
+        }
+        soma += termo
+        termo += razao
+    }
+
+    println("\nSoma total: $soma")
+}
+
+/*• [DESAFIO] Faça um programa que mostre os 10 primeiros elementos
+da Sequência de Fibonacci:
+
+1 1 2 3 5 8 13 21...*/
+
+fun exercicioFibonacci(quantidade: Int) {
+    var a = 1
+    var b = 1
+
+    for (i in 1..quantidade) {
+        print("$a ")
+        if (i < quantidade) {
+            print(">> ")
+        }
+        val temp = a
+        a = b
+        b = temp + b
+    }
+}

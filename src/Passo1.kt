@@ -204,7 +204,7 @@ fun salary(){
 
 }
 
-//15-[DESAFIO] Escreva um programa para calcular a redução do tempo de vida de um fumante.
+//16-[DESAFIO] Escreva um programa para calcular a redução do tempo de vida de um fumante.
 //
 //Pergunte a quantidade de cigarros fumados por dia e quantos anos ele já fumou.
 //Considere que um fumante perde 10 minutos de vida a cada cigarro.
@@ -229,29 +229,6 @@ fun cigarro() {
 
 
     println("Você já perdeu aproximadamente %.2f dias de vida devido ao cigarro.".format(diasPerdidos))
-}
-//
-//17-Escreva um programa que pergunte a velocidade de um carro.
-//
-//Caso ultrapasse 80Km/h, exiba uma mensagem dizendo que o usuário foi multado.
-//O valor da multa será de R$5 por cada Km acima da velocidade permitida.
-fun multa() {
-
-    print("Digite a velocidade do carro (Km/h): ")
-    val velocidade = readLine()!!.toInt()
-
-
-    val limite = 80
-
-
-    if (velocidade > limite) {
-        val excesso = velocidade - limite
-        val multa = excesso * 5
-        println("Você foi MULTADO! Excedeu o limite de $limite Km/h.")
-        println("O valor da multa é de R$$multa,00.")
-    } else {
-        println("Velocidade dentro do limite. Dirija com segurança!")
-    }
 }
 
 
