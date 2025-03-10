@@ -212,6 +212,41 @@ fun processAges() {
 }
 
 /*
+* • Faça um algoritmo que leia a nota de 10 alunos de uma turma e
+guarde-as em um vetor. No final, mostre:
+• Qual é a média da turma
+• Quantos alunos estão acima da média da turma
+• Qual foi a maior nota digitada
+• Em que posições a maior nota aparece
+* */
+
+fun processGrades() {
+    val grades = DoubleArray(10)
+
+    for (i in grades.indices) {
+        print("Digite a nota do ${i + 1}º aluno: ")
+        grades[i] = readLine()!!.toDouble()
+    }
+
+    val sum = grades.sum()
+    val average = sum / grades.size
+    println("A média da turma é: $average")
+
+    val aboveAverageCount = grades.count { it > average }
+    println("Quantidade de alunos com notas acima da média: $aboveAverageCount")
+
+    val maxGrade = grades.maxOrNull() ?: 0.0
+    val maxGradePositions = mutableListOf<Int>()
+    for (i in grades.indices) {
+        if (grades[i] == maxGrade) {
+            maxGradePositions.add(i)
+        }
+    }
+    println("A maior nota digitada foi: $maxGrade")
+    println("A maior nota aparece nas posições: ${maxGradePositions.joinToString(", ")}")
+}
+
+/*
 * [DESAFIO] Crie uma lógica que preencha um vetor de 20 posições
 * com números aleatórios (entre 0 e 99) gerados pelo computador.
 * Logo em seguida, mostre os números gerados e depois coloque o
